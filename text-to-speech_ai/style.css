@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1a1a1a;
+    font-size: 16px;
+    color: #f4f4f4;
+}
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #212121, #ffcc00);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 45px;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero h1 span {
+    color: #ffcc00;
+}
+
+textarea {
+    width: 100%;
+    max-width: 600px;
+    height: 250px;
+    background: #333;
+    color: #fff;
+    font-size: 16px;
+    border: 0;
+    outline: 0;
+    padding: 20px;
+    border-radius: 10px;
+    resize: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+textarea:focus {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+textarea::placeholder {
+    font-size: 18px;
+    color: #f7ecec;
+}
+
+.row {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    gap: 15px;
+    animation: slideIn 1s ease-out;
+}
+
+select {
+    width: 45%;
+    padding: 12px 15px;
+    font-size: 16px;
+    border-radius: 25px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+select:hover {
+    background-color: #ffcc00;
+}
+
+button {
+    padding: 12px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    background-color: #ffcc00;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #e6b800;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    textarea {
+        width: 90%;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
